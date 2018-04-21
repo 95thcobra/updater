@@ -35,6 +35,13 @@ RELEASED_VER=$(git describe --abbrev=0 | sed 's/runelite-parent-//')
 
 # Update static.runelite.net
 
+# Generate dependency hashes
+cd $BASEDIR/deps
+cat pom.xml.template | sed "s/VERSION/$RELEASED_VER/" > pom.xml # create project to pull in the release
+mvn dependency:build-classpath -Dmdep.outputFile=../classpath # build classpath of the release
+cd ..
+./gen-bootstrap.py < classpath > bootstrap.json
+
 cd $STATIC_RUNELITE_NET
 sed "s/RELEASE/$RELEASED_VER/" $BASEDIR/bootstrap.json > bootstrap.json
 git add bootstrap.json

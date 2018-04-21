@@ -5,6 +5,7 @@
 	<artifactId>updater</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<name>Updater</name>
+	<packaging>pom</packaging>
 
 	<distributionManagement>
 		<repository>
