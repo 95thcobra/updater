@@ -10,7 +10,6 @@
     "clientJvmArguments": [
         "-Xmx512m",
         "-Xss2m",
-        "-Dsun.java2d.noddraw=false",
         "-XX:CompileThreshold=1500",
         "-Xincgc",
         "-XX:+UseConcMarkSweepGC",
@@ -20,7 +19,6 @@
     "clientJvm9Arguments": [
         "-Xmx512m",
         "-Xss2m",
-        "-Dsun.java2d.noddraw=false",
         "-XX:CompileThreshold=1500",
         "-Djna.nosys=true"
     ],
@@ -28,7 +26,6 @@
         "-Drunelite.launcher.nojvm=true",
 	"-Xmx512m",
 	"-Xss2m",
-	"-Dsun.java2d.noddraw=false",
 	"-XX:CompileThreshold=1500",
 	"-Xincgc",
 	"-XX:+UseConcMarkSweepGC",
