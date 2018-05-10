@@ -54,9 +54,9 @@ fi
 # step 2. map old deob (which has the mapping annotations) -> new client
 rm -f $DEOBFUSCATED_WITH_MAPPINGS
 java $JAVA_ARGS -cp $DEOB_PATH net.runelite.deob.updater.UpdateMappings $RS_CLIENT_PATH $DEOBFUSCATED $DEOBFUSCATED_WITH_MAPPINGS
-#if [ $? -ne 0 ] ; then
-#	exit 1
-#fi
+if [ $? -ne 0 ] ; then
+	exit 1
+fi
 
 # decompile deobfuscated mapped client.
 rm -rf /tmp/dest
